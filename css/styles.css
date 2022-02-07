@@ -1,0 +1,41 @@
+/********************* TAG SELECTORS ******************/
+body {
+    background-color: #E0E0E0;
+    padding: 2px;
+}
+hr {
+    border: 2px solid black;
+    width: 50%;
+}
+p {
+    font-size: 36px;
+    padding-right: 15px;
+    text-align: justify;
+}
+
+/********************* CLASS SELECTORS ******************/
+
+.item1 {
+    font-size: 36px;
+    border: 3px solid;
+}
+
+.newspaper {
+    font-family: 'Kanzlei', sans-serif;
+    font-size: 90px;
+    font-weight: 500;
+}
+
+.second-row {
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    font-size: 24px;
+}
+.third-row {
+    font-size: 100px;
+    font-style: italic;
+}
+
+.fourth-row {
+    font-size: 45px;
+}

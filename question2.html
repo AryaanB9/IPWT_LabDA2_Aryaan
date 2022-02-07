@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="Author", content="Aryaan">
+    <title>Question 2</title>
+
+    <script>
+        var product = new Array;
+        product = [2.98, 4.50, 9.98, 4.49, 6.87];
+        var total = new Array;
+        for(var i = 0; i<6; i++){
+            total[i] = 0;
+        }
+        while(true){
+            var a = prompt("Enter Product No. or 0 to Exit");
+            if(a < 1 || a > 5){
+                if(a!=0){
+                    alert("Wrong Product Number");
+                }
+                break;
+            }
+            var b = prompt("Enter Quantity");
+            
+            switch(a){
+                case '1':
+                    total[0] = total[0] + product[0]*b;
+                    total[5] = total[5] + total[0];
+                    break;
+                case '2':
+                    total[1] = total[1] + product[1]*b;
+                    total[5] = total[5] + total[1];
+                    break;
+                case '3':
+                    total[2] = total[2] + product[2]*b;
+                    total[5] = total[5] + total[2];
+                    break;
+                case '4':
+                    total[3] = total[3] + product[3]*b;
+                    total[5] = total[5] + total[3];
+                    break;
+                case '5':
+                    total[4] = total[4] + product[4]*b;
+                    total[5] = total[5] + total[4];
+                    break;
+                default:
+                    break;
+            }
+        }
+        document.write("<center><table><tr><th>Product</th><th>Total Sales</th></tr> <tr><td>Product 1</td><td>"+total[0]+"$</td></tr> <tr><td>Product 2</td><td>"+total[1]+"$</td></tr><tr><td>Product 3</td><td>"+total[2]+"$</td></tr><tr><td>Product 4</td><td>"+total[3]+"$</td></tr><tr><td>Product 5</td><td>"+total[4]+"$</td></tr><tr><td>Total Value</td><td>"+total[5]+"$</td></tr></table></center>");
+    </script>
+
+    <style>
+        table {
+            background-color: whitesmoke;
+            border-collapse: collapse;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 24px;
+            width: 40%;
+        }
+        td, th {
+            border: 1px solid;
+            padding: 5%;
+            text-align: center;
+        }
+        body{
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+</html>

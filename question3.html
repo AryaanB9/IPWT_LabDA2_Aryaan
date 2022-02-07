@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="Author", content="Aryaan">
+    <title>Question 3</title>
+
+    <link rel = "icon" href = "images/car-icon.png" type = "image/x-icon">
+
+    <style>
+        body {
+            background-color: aliceblue;
+        }
+        img {
+            width: 65%;
+            margin-top: 12%;
+        }
+        p {
+            text-align: center;
+        }
+
+        .car-div {
+            height: 450px;
+            width: 800px;
+            margin: auto ;
+        }
+        .button1 {
+            padding: 3px;
+            width: 10%;
+        }
+    </style>
+
+    <script>
+        var carArr = new Array();
+        var description = new Array();
+        var i = 0;
+        var max = 5;
+        description = ["AMG GT", "Lamborghini Huracan", "BMW 3-Series", "Range Rover Evoque", "Lamborghini Aventador"];
+        carArr = ["images/car1.jpg", "images/car2.jpg", "images/car3.jpg", "images/car4.jpg", "images/car5.jpg"];
+        
+        function next_image(){
+            i = (i+1)%max;
+            document.getElementById("car-image").src = carArr[i]
+            document.getElementById("image-desc").innerHTML = description[i]
+        }
+        function prev_image(){
+            i = (i-1)%max;
+            if(i<0){
+                i = i+max;
+            }
+            document.getElementById("car-image").src = carArr[i]
+            document.getElementById("image-desc").innerHTML = description[i]
+        }
+        function addimg(){
+            max = max + 1;
+            var str1 = prompt("Enter the next car no. of image");
+            carArr[max-1] = "images/"+str1+".jpg";
+            var str2 = prompt("Enter the description");
+            description[max-1] = str2;
+        }
+    </script>
+
+    
+</head>
+<body>
+    <div class="car-div">
+        <center>
+            <img src="images/car1.jpg" alt="" id="car-image">
+        </center>
+    </div>
+    
+    
+    <p id="image-desc">AMG GT</p>
+    <center>
+        <input value="Previous Image" type="button" name="b1" onclick="prev_image()" class="button1">
+        <input value="Add Image" type="button" name="b1" onclick="addimg()" class="button1">
+        <input value="Next Image" type="button" name="b1" onclick="next_image()" class="button1">
+    </center>
+    
+    <!-- <button onclick="images_next()">Next</button> -->
+</body>
+
+
+
+
+<script>
+    /*
+        document.write("<input value='Next' type='button' name='b1' onclick='images_next()'>");
+        document.write("<input value='Add' type='button' name='b1' onclick='addimg()'>");
+        document.write("<p><img src ="+carArr[i]+" width='20%'></p>");
+        document.write("<p>"+description[i]+"</p>");
+
+        function disp(){
+            document.write("<p><img src ="+carArr[i]+" width='20%'></p>");
+            document.write("<p>"+description[i]+"</p>");
+            document.write("<input value='Next' type='button' name='b1' onclick='images_next()'>");
+            document.write("<input value='Add' type='button' name='b1' onclick='addimg()'>");
+        }
+        */
+</script>
+</html>
